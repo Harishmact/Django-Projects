@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+<!--setting category image as background image -->
+<img src="{{c.image.url}}" height="350px" width="100%"></div>
+
+<div class="mt-5" style="margin-bottom:100px;text-align:justify;"><center> <h2 style="color:purple;font-weight:bold;">{{c.name}}</h2></center><br>
+<h4>{{c.desc}}</h4></div>
+ <div class="row" style="margin-left:100px;margin-bottom:100px;">
+        {% for i in p %}      <!--product table content accessing -->
+        <div class="col-sm-4">
+            <div class="card" style="margin-right:70px;">
+  <img src="{{i.image.url}}" height="250px" width="100px" class="card-img-top">
+  <div class="card-body">
+      <br>
+    <h5 class="card-title" style="font-weight:bold">{{i.name}}</h5>
+    <p class="card-text">Rs.{{i.price}}</p>
+      <a href="{% url 'shop:detail' i.name %}" class="btn btn-primary" style="position:relative;left:38%;">Details</a>
+  </div>
+</div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

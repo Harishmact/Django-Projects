@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+            <h3>User name:{{user.username}}</h3>
+
+    <div class="row border border-bordered mb-4">
+
+        {% for i in order %}
+        <div class="col-sm-4 border border-bordered mb-4">
+
+            <img src="{{i.product.image.url}}" height="150px" width="250px">
+        </div>
+        <div class="col-sm-6 border border-bordered mb-4">
+            <h6>OrderAddress:{{i.address}}</h6>
+            <h6>customer Phone:{{i.phone}}</h6>
+            <h6>Product Name:{{i.product.name}}</h6>
+            <h6>Product Price:{{i.product.price}}</h6>
+            <h6>Ordered On:{{i.date_added}}</h6>
+            <h6>Delivery status:{{i.delivery_status}}</h6>
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+</div>
+{% endblock %}

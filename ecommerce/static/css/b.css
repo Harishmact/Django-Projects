@@ -1,0 +1,24 @@
+body{
+background-color:#34ebb7;
+    font-family: 'Crimson Pro', serif;
+font-size: 20px;
+}
+
+
+.footer{
+height:40px;
+width:100%;
+background-color:white;
+position:fixed;
+bottom:0;
+left:0;
+text-align:center;
+font-weight:bold;
+}
+.card{
+background-color:#5cd1be;
+}
+
+.table{
+border:2px solid black;
+}
